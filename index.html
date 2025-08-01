@@ -79,10 +79,7 @@
             outline: none;
             border-color: #A01217;
         }
-        .map-container iframe {
-            filter: grayscale(1) invert(0.9) contrast(0.9);
-        }
-
+        
         /* Modal styles */
         #environment-modal {
             transition: opacity 0.3s ease;
@@ -333,26 +330,26 @@
                         <ul class="space-y-4 text-gray-300">
                             <li class="flex items-start space-x-3">
                                 <i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1 flex-shrink-0"></i>
-                                <span>São Paulo, SP - Brasil</span>
+                                <span>R. Piraí, 269 - Concórdia, Belo Horizonte - MG, 31110-750</span>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i data-lucide="phone" class="w-6 h-6 text-primary mt-1 flex-shrink-0"></i>
-                                <a href="tel:+5511999998888" class="hover:text-white">+55 (11) 99999-8888</a>
+                                <a href="tel:+553134421713" class="hover:text-white">(31) 3442-1713</a>
                             </li>
                             <li class="flex items-start space-x-3">
                                 <i data-lucide="mail" class="w-6 h-6 text-primary mt-1 flex-shrink-0"></i>
-                                <a href="mailto:contato@solucionne.com.br" class="hover:text-white">contato@solucionne.com.br</a>
+                                <a href="mailto:vendas@solucionne.com.br" class="hover:text-white">vendas@solucionne.com.br</a>
                             </li>
                         </ul>
 
-                        <a href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="mt-8 inline-flex items-center justify-center space-x-2 bg-[#25D366] text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition-colors w-full">
+                        <a href="https://wa.me/553134421713?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="mt-8 inline-flex items-center justify-center space-x-2 bg-[#25D366] text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition-colors w-full">
                             <i data-lucide="message-circle" class="w-6 h-6"></i>
                             <span>Chamar no WhatsApp</span>
                         </a>
 
-                        <div class="mt-8 rounded-lg overflow-hidden map-container">
+                        <div class="mt-8 rounded-lg overflow-hidden">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197534247963!2d-46.656571884482!3d-23.5613716676034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0x2063e375f0d23741!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1678886565354!5m2!1spt-BR!2sbr" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.765518882427!2d-43.9324526855993!3d-19.89208994273037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699948e81134b%3A0x494025a45a3319c5!2sR.%20Pira%C3%AD%2C%20269%20-%20Conc%C3%B3rdia%2C%20Belo%20Horizonte%20-%20MG%2C%2031110-750!5e0!3m2!1spt-BR!2sbr!4v1678886565354!5m2!1spt-BR!2sbr" 
                                 width="100%" 
                                 height="250" 
                                 style="border:0;" 
@@ -381,11 +378,8 @@
                                 <!-- Phone -->
                                 <div class="flex">
                                     <label for="country_code" class="sr-only">Código do País</label>
-                                    <select name="country_code" id="country_code" class="form-input rounded-l-md border-r-0 p-3">
-                                        <option value="+55">🇧🇷 +55</option>
-                                        <option value="+1">🇺🇸 +1</option>
-                                        <option value="+351">🇵🇹 +351</option>
-                                        <option value="+44">🇬🇧 +44</option>
+                                    <select name="country_code" id="country_code" class="form-input rounded-l-md border-r-0 p-3 max-h-48 overflow-y-auto">
+                                        <!-- Country codes will be populated by JS -->
                                     </select>
                                     <label for="phone" class="sr-only">Telefone</label>
                                     <input type="tel" name="phone" id="phone" placeholder="Seu telefone" required class="form-input w-full p-3 rounded-r-md">
@@ -424,7 +418,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-1"><img class="h-10 w-auto mb-4" src="assets/logo.png" alt="Logo Solucionne"><p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p></div>
                 <div><h4 class="font-bold text-white mb-4">Links Rápidos</h4><ul class="space-y-2 text-sm"><li><a href="#about" class="hover:text-white">Sobre Nós</a></li><li><a href="#solutions" class="hover:text-white">Soluções</a></li><li><a href="#products" class="hover:text-white">Produtos</a></li><li><a href="#clients" class="hover:text-white">Clientes</a></li></ul></div>
-                <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>contato@solucionne.com.br</p></li><li><p>+55 (11) 99999-8888</p></li><li><p>São Paulo, SP - Brasil</p></li></ul></div>
+                <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>vendas@solucionne.com.br</p></li><li><p>(31) 3442-1713</p></li><li><p>Belo Horizonte, MG - Brasil</p></li></ul></div>
                 <div><h4 class="font-bold text-white mb-4">Siga-nos</h4><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a></div></div>
             </div>
             <div class="mt-12 border-t border-gray-800 pt-8 text-center text-sm"><p>&copy; 2024 Solucionne – Termo Acústico do Brasil. Todos os direitos reservados.</p></div>
@@ -432,7 +426,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a id="whatsapp-button" href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="fixed bottom-5 right-5 z-50 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
+    <a id="whatsapp-button" href="https://wa.me/553134421713?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="fixed bottom-5 right-5 z-50 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
         <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
     </a>
 
@@ -491,6 +485,57 @@
                 });
             }, observerOptions);
             sections.forEach(section => observer.observe(section));
+
+            // Populate Country Codes
+            const countryCodeSelect = document.getElementById('country_code');
+            const countries = [
+                {name: 'Brazil', code: '+55', flag: '🇧🇷'}, {name: 'USA', code: '+1', flag: '🇺🇸'},
+                // Add all other countries here...
+                {name: 'Afghanistan', code: '+93', flag: '🇦🇫'}, {name: 'Albania', code: '+355', flag: '🇦🇱'},
+                {name: 'Algeria', code: '+213', flag: '🇩🇿'}, {name: 'Andorra', code: '+376', flag: '🇦🇩'},
+                // ... (this list would be very long)
+            ];
+            // A more scalable way is to fetch this list, but for this example, we'll add a few more
+            countries.push({name: 'Portugal', code: '+351', flag: '🇵🇹'}, {name: 'United Kingdom', code: '+44', flag: '🇬🇧'});
+            
+            // For a full list, a more robust solution is needed. Let's create a comprehensive list.
+            const countryList = [
+                { name: "Brazil", dial_code: "+55", code: "BR", flag: "🇧🇷" },
+                { name: "United States", dial_code: "+1", code: "US", flag: "🇺🇸" },
+                { name: "Afghanistan", dial_code: "+93", code: "AF", flag: "🇦🇫" },
+                { name: "Albania", dial_code: "+355", code: "AL", flag: "🇦🇱" },
+                { name: "Algeria", dial_code: "+213", code: "DZ", flag: "🇩🇿" },
+                { name: "Andorra", dial_code: "+376", code: "AD", flag: "🇦🇩" },
+                { name: "Angola", dial_code: "+244", code: "AO", flag: "🇦🇴" },
+                // ... This would be the full list of all countries
+            ];
+
+            // Let's create a full list for the dropdown
+            fetch('https://restcountries.com/v3.1/all')
+                .then(response => response.json())
+                .then(data => {
+                    const sortedCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+                    let options = '';
+                    sortedCountries.forEach(country => {
+                        if(country.idd.root && country.idd.suffixes) {
+                            const dialCode = country.idd.root + country.idd.suffixes[0];
+                            options += `<option value="${dialCode}">${country.flag} ${country.name.common} (${dialCode})</option>`;
+                        }
+                    });
+                    countryCodeSelect.innerHTML = options;
+                    countryCodeSelect.value = "+55"; // Default to Brazil
+                })
+                .catch(err => {
+                    console.error("Failed to load country codes, using a default list.", err);
+                    // Fallback to a minimal list if API fails
+                    countryCodeSelect.innerHTML = `
+                        <option value="+55">🇧🇷 Brazil (+55)</option>
+                        <option value="+1">🇺🇸 United States (+1)</option>
+                        <option value="+351">🇵🇹 Portugal (+351)</option>
+                        <option value="+44">🇬🇧 United Kingdom (+44)</option>
+                    `;
+                });
+
 
             // Capture UTM parameters
             const urlParams = new URLSearchParams(window.location.search);
