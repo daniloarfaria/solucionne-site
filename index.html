@@ -82,6 +82,22 @@
         .map-container iframe {
             filter: grayscale(1) invert(0.9) contrast(0.9);
         }
+
+        /* Modal styles */
+        #environment-modal {
+            transition: opacity 0.3s ease;
+        }
+        #modal-content {
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        #environment-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #environment-modal.active #modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -92,7 +108,7 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#home" class="flex-shrink-0">
-                    <img class="h-10 w-auto" src="assets/logo.png" alt="Logo Solucionne">
+                    <img class="h-10 w-auto" src="assets/home/logo.png" alt="Logo Solucionne">
                 </a>
 
                 <!-- Desktop Navigation -->
@@ -175,11 +191,11 @@
         </section>
 
         <!-- =========== NOSSAS SOLUÇÕES =========== -->
-        <section id="solutions" class="py-20 md:py-24 bg-dark-alt">
+        <section id="solutions" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Nossas Soluções Completas</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Oferecemos soluções sob medida para ambientes residenciais, corporativos e industriais. Da consultoria ao laudo final, cada projeto é executado com precisão técnica e atenção aos detalhes.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossas Soluções Completas</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Oferecemos soluções sob medida para ambientes residenciais, corporativos e industriais. Da consultoria ao laudo final, cada projeto é executado com precisão técnica e atenção aos detalhes.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-[#1c1c1c] p-8 rounded-xl text-center transition-transform transform hover:-translate-y-2"><i data-lucide="bar-chart-4" class="w-12 h-12 text-primary mx-auto mb-4"></i><h3 class="text-xl font-bold text-white mb-2">Análise de Ruídos</h3><p class="text-gray-400">Diagnóstico preciso das fontes de ruído e seus níveis de impacto.</p></div>
@@ -193,38 +209,54 @@
         </section>
 
         <!-- =========== AMBIENTES ATENDIDOS =========== -->
-        <section id="environments" class="py-20 md:py-24 bg-white">
+        <section id="environments" class="py-20 md:py-24 bg-primary">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Atendemos a Todos os Tipos de Ambiente</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Seja para tornar sua casa mais silenciosa ou atender às exigências acústicas de grandes empreendimentos, temos a solução ideal para cada espaço.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Atendemos a Todos os Tipos de Ambiente</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-white/80">Seja para tornar sua casa mais silenciosa ou atender às exigências acústicas de grandes empreendimentos, temos a solução ideal para cada espaço.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="relative rounded-xl overflow-hidden group"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop" alt="Residência moderna" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Residências</h3></div></div>
-                    <div class="relative rounded-xl overflow-hidden group"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2232&auto=format&fit=crop" alt="Escritório comercial" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Comércios</h3></div></div>
-                    <div class="relative rounded-xl overflow-hidden group"><img src="https://images.unsplash.com/photo-1580983216230-dc579362c3f4?q=80&w=2070&auto=format&fit=crop" alt="Fábrica industrial" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Indústrias</h3></div></div>
+                    <button class="env-card relative rounded-xl overflow-hidden group text-left w-full" data-img-src="assets/home/imagem-destaque2.jpg" data-title="Residências" data-text="Projetamos soluções acústicas para residências que garantem o máximo de conforto e privacidade. Desde o isolamento de ruídos externos até a criação de home cinemas com acústica perfeita, transformamos sua casa em um santuário de tranquilidade.">
+                        <img src="assets/home/imagem-destaque2.jpg" alt="Residência moderna" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Residências</h3></div>
+                    </button>
+                    <button class="env-card relative rounded-xl overflow-hidden group text-left w-full" data-img-src="assets/home/imagem-destaque3.jpg" data-title="Comércios" data-text="Para lojas, restaurantes e escritórios, oferecemos soluções que melhoram a experiência do cliente e a produtividade dos colaboradores. Controlamos a reverberação e criamos ambientes acusticamente agradáveis e profissionais.">
+                        <img src="assets/home/imagem-destaque3.jpg" alt="Escritório comercial" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Comércios</h3></div>
+                    </button>
+                    <button class="env-card relative rounded-xl overflow-hidden group text-left w-full" data-img-src="assets/home/projeto.jpg" data-title="Indústrias" data-text="Desenvolvemos projetos para o setor industrial focados na segurança e conformidade com as normas de ruído. Nossas soluções incluem enclausuramento de máquinas, barreiras acústicas e tratamento de ambientes para proteger a saúde auditiva dos trabalhadores.">
+                        <img src="assets/home/projeto.jpg" alt="Fábrica industrial" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Indústrias</h3></div>
+                    </button>
                 </div>
             </div>
         </section>
 
+        <!-- Separator -->
+        <div class="bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="border-t border-gray-200"></div>
+            </div>
+        </div>
+
         <!-- =========== PRODUTOS ACÚSTICOS =========== -->
-        <section id="products" class="py-20 md:py-24 bg-dark-alt">
+        <section id="products" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Produtos de Alta Performance para Controle de Ruído</h2>
-                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Com tecnologia de ponta, desenvolvemos e aplicamos produtos certificados e eficientes que aliam estética, funcionalidade e performance.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Produtos de Alta Performance para Controle de Ruído</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">Com tecnologia de ponta, desenvolvemos e aplicamos produtos certificados e eficientes que aliam estética, funcionalidade e performance.</p>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    <a href="difusores-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Difusor" alt="Difusores Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Difusores Acústicos</h4></div></a>
-                    <a href="espumas-acusticas.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Espuma" alt="Espumas Acústicas" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Espumas Acústicas</h4></div></a>
-                    <a href="forro-acustico.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Forro" alt="Forro Acústico" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Forro Acústico</h4></div></a>
-                    <a href="janela-acustica.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Janela" alt="Janela Acústica" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Janela Acústica</h4></div></a>
-                    <a href="jateamento-termo-acustico.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Jateamento" alt="Jateamento Termo-Acústico" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Jateamento Termo-Acústico</h4></div></a>
-                    <a href="paineis-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Painel" alt="Painéis Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Painéis Acústicos</h4></div></a>
-                    <a href="parede-acustica.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Parede" alt="Parede Acústica" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Parede Acústica</h4></div></a>
-                    <a href="pisos-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Piso" alt="Pisos Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Pisos Acústicos</h4></div></a>
-                    <a href="portas-acusticas.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Porta" alt="Portas Acústicas" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Portas Acústicas</h4></div></a>
-                    <a href="visores-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Visor" alt="Visores Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Visores Acústicos</h4></div></a>
+                    <a href="difusores-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/difusores-acusticos.png" alt="Difusores Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Difusores Acústicos</h4></div></a>
+                    <a href="espumas-acusticas.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/espumas-acusticas.png" alt="Espumas Acústicas" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Espumas Acústicas</h4></div></a>
+                    <a href="forro-acustico.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/forro-acustico-com-amortecedor.png" alt="Forro Acústico" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Forro Acústico</h4></div></a>
+                    <a href="janela-acustica.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/janelas-acusticas.png" alt="Janela Acústica" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Janela Acústica</h4></div></a>
+                    <a href="jateamento-termo-acustico.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/jateamento-termo-acustico.jpg" alt="Jateamento Termo-Acústico" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Jateamento Termo-Acústico</h4></div></a>
+                    <a href="paineis-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/paineis-de-absorcao-sonora.png" alt="Painéis Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Painéis Acústicos</h4></div></a>
+                    <a href="parede-acustica.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/parede-acustica-com-amortecedor.png" alt="Parede Acústica" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Parede Acústica</h4></div></a>
+                    <a href="pisos-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/pisos-silenciadores.png" alt="Pisos Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Pisos Acústicos</h4></div></a>
+                    <a href="portas-acusticas.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/portas-acusticas.png" alt="Portas Acústicas" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Portas Acústicas</h4></div></a>
+                    <a href="visores-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="assets/home/visores-acusticos.png" alt="Visores Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Visores Acústicos</h4></div></a>
                 </div>
             </div>
         </section>
@@ -237,11 +269,12 @@
                     <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Empresas líderes em seus segmentos confiam na Solucionne para soluções acústicas de alto padrão.</p>
                 </div>
                 <div class="mt-12 flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-                    <img src="https://placehold.co/120x60/FFFFFF/1C1C1C?text=Itambé" alt="Logo Itambé" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://placehold.co/120x60/FFFFFF/1C1C1C?text=Ortobom" alt="Logo Ortobom" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://placehold.co/120x60/FFFFFF/1C1C1C?text=Suggar" alt="Logo Suggar" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://placehold.co/120x60/FFFFFF/1C1C1C?text=Sengel" alt="Logo Sengel" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://placehold.co/120x60/FFFFFF/1C1C1C?text=Cliente+5" alt="Logo Cliente 5" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/home/logo-clientes/logo-cliente-audi.png" alt="Logo Audi" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/home/logo-clientes/logo-cliente-banco-do-brasil.png" alt="Logo Banco do Brasil" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/home/logo-clientes/logo-cliente-correios.png" alt="Logo Correios" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/home/logo-clientes/logo-cliente-inter.png" alt="Logo Inter" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/home/logo-clientes/logo-cliente-oi.png" alt="Logo Oi" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="assets/home/logo-clientes/logo-cliente-sebrae.png" alt="Logo Sebrae" class="h-12 filter grayscale hover:grayscale-0 transition-all duration-300">
                 </div>
             </div>
         </section>
@@ -369,7 +402,7 @@
     <footer class="bg-[#111111] text-gray-400">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-1"><img class="h-10 w-auto mb-4" src="assets/logo.png" alt="Logo Solucionne"><p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p></div>
+                <div class="md:col-span-1"><img class="h-10 w-auto mb-4" src="assets/home/logo.png" alt="Logo Solucionne"><p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p></div>
                 <div><h4 class="font-bold text-white mb-4">Links Rápidos</h4><ul class="space-y-2 text-sm"><li><a href="#about" class="hover:text-white">Sobre Nós</a></li><li><a href="#solutions" class="hover:text-white">Soluções</a></li><li><a href="#products" class="hover:text-white">Produtos</a></li><li><a href="#clients" class="hover:text-white">Clientes</a></li></ul></div>
                 <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>contato@solucionne.com.br</p></li><li><p>+55 (11) 99999-8888</p></li><li><p>São Paulo, SP - Brasil</p></li></ul></div>
                 <div><h4 class="font-bold text-white mb-4">Siga-nos</h4><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a></div></div>
@@ -382,6 +415,20 @@
     <a id="whatsapp-button" href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="fixed bottom-5 right-5 z-50 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform">
         <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
     </a>
+
+    <!-- Environment Modal -->
+    <div id="environment-modal" class="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        <div id="modal-content" class="bg-white text-gray-800 rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative transform scale-95 opacity-0">
+            <button id="modal-close-button" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 z-10">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+            <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-t-lg">
+            <div class="p-8">
+                <h3 id="modal-title" class="text-3xl font-bold mb-4"></h3>
+                <p id="modal-text" class="text-lg"></p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Initialize Lucide Icons
@@ -475,6 +522,48 @@
                     submitButton.textContent = 'Fale com nossos consultores';
                 });
             });
+
+            // Environment Modal Logic
+            const envModal = document.getElementById('environment-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalCloseButton = document.getElementById('modal-close-button');
+            const modalImage = document.getElementById('modal-image');
+            const modalTitle = document.getElementById('modal-title');
+            const modalText = document.getElementById('modal-text');
+            const envCards = document.querySelectorAll('.env-card');
+
+            const openModal = (card) => {
+                const imgSrc = card.dataset.imgSrc;
+                const title = card.dataset.title;
+                const text = card.dataset.text;
+
+                modalImage.src = imgSrc;
+                modalImage.alt = title;
+                modalTitle.textContent = title;
+                modalText.textContent = text;
+
+                document.body.style.overflow = 'hidden';
+                envModal.classList.remove('opacity-0', 'pointer-events-none');
+                envModal.classList.add('active');
+            };
+
+            const closeModal = () => {
+                document.body.style.overflow = '';
+                envModal.classList.add('opacity-0', 'pointer-events-none');
+                envModal.classList.remove('active');
+            };
+
+            envCards.forEach(card => {
+                card.addEventListener('click', () => openModal(card));
+            });
+
+            modalCloseButton.addEventListener('click', closeModal);
+            envModal.addEventListener('click', (e) => {
+                if (e.target === envModal) {
+                    closeModal();
+                }
+            });
+
         });
     </script>
 
