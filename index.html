@@ -115,12 +115,12 @@
                     <a href="#solutions" class="nav-link text-sm font-semibold text-gray-300">Soluções</a>
                     
                     <!-- Products Dropdown -->
-                    <div class="relative group">
+                    <div class="relative group pt-6 pb-6 -my-6">
                         <button class="nav-link flex items-center text-sm font-semibold text-gray-300 hover:text-white transition-colors">
                             <span>Produtos</span>
                             <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
                         </button>
-                        <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-[#2a2a2a] rounded-lg shadow-lg p-2">
+                        <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 w-64 bg-[#2a2a2a] rounded-lg shadow-lg p-2">
                             <a href="difusores-acusticos.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Difusores Acústicos</a>
                             <a href="espumas-acusticas.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Espumas Acústicas</a>
                             <a href="forro-acustico.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Forro Acústico</a>
@@ -376,13 +376,9 @@
                                     <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" required class="form-input w-full p-3 rounded-md">
                                 </div>
                                 <!-- Phone -->
-                                <div class="flex">
-                                    <label for="country_code" class="sr-only">Código do País</label>
-                                    <select name="country_code" id="country_code" class="form-input rounded-l-md border-r-0 p-3 max-h-48 overflow-y-auto">
-                                        <!-- Country codes will be populated by JS -->
-                                    </select>
+                                <div>
                                     <label for="phone" class="sr-only">Telefone</label>
-                                    <input type="tel" name="phone" id="phone" placeholder="Seu telefone" required class="form-input w-full p-3 rounded-r-md">
+                                    <input type="tel" name="phone" id="phone" placeholder="Seu telefone com DDD" required class="form-input w-full p-3 rounded-md">
                                 </div>
                                 <!-- Message -->
                                 <div>
@@ -418,7 +414,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-1"><img class="h-10 w-auto mb-4" src="assets/logo.png" alt="Logo Solucionne"><p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p></div>
                 <div><h4 class="font-bold text-white mb-4">Links Rápidos</h4><ul class="space-y-2 text-sm"><li><a href="#about" class="hover:text-white">Sobre Nós</a></li><li><a href="#solutions" class="hover:text-white">Soluções</a></li><li><a href="#products" class="hover:text-white">Produtos</a></li><li><a href="#clients" class="hover:text-white">Clientes</a></li></ul></div>
-                <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>vendas@solucionne.com.br</p></li><li><p>(31) 3442-1713</p></li><li><p>Belo Horizonte, MG - Brasil</p></li></ul></div>
+                <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>vendas@solucionne.com.br</p></li><li><p>(31) 3442-1713</p></li><li><p>R. Piraí, 269 - Concórdia, Belo Horizonte - MG, 31110-750</p></li></ul></div>
                 <div><h4 class="font-bold text-white mb-4">Siga-nos</h4><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a></div></div>
             </div>
             <div class="mt-12 border-t border-gray-800 pt-8 text-center text-sm"><p>&copy; 2024 Solucionne – Termo Acústico do Brasil. Todos os direitos reservados.</p></div>
@@ -486,57 +482,6 @@
             }, observerOptions);
             sections.forEach(section => observer.observe(section));
 
-            // Populate Country Codes
-            const countryCodeSelect = document.getElementById('country_code');
-            const countries = [
-                {name: 'Brazil', code: '+55', flag: '🇧🇷'}, {name: 'USA', code: '+1', flag: '🇺🇸'},
-                // Add all other countries here...
-                {name: 'Afghanistan', code: '+93', flag: '🇦🇫'}, {name: 'Albania', code: '+355', flag: '🇦🇱'},
-                {name: 'Algeria', code: '+213', flag: '🇩🇿'}, {name: 'Andorra', code: '+376', flag: '🇦🇩'},
-                // ... (this list would be very long)
-            ];
-            // A more scalable way is to fetch this list, but for this example, we'll add a few more
-            countries.push({name: 'Portugal', code: '+351', flag: '🇵🇹'}, {name: 'United Kingdom', code: '+44', flag: '🇬🇧'});
-            
-            // For a full list, a more robust solution is needed. Let's create a comprehensive list.
-            const countryList = [
-                { name: "Brazil", dial_code: "+55", code: "BR", flag: "🇧🇷" },
-                { name: "United States", dial_code: "+1", code: "US", flag: "🇺🇸" },
-                { name: "Afghanistan", dial_code: "+93", code: "AF", flag: "🇦🇫" },
-                { name: "Albania", dial_code: "+355", code: "AL", flag: "🇦🇱" },
-                { name: "Algeria", dial_code: "+213", code: "DZ", flag: "🇩🇿" },
-                { name: "Andorra", dial_code: "+376", code: "AD", flag: "🇦🇩" },
-                { name: "Angola", dial_code: "+244", code: "AO", flag: "🇦🇴" },
-                // ... This would be the full list of all countries
-            ];
-
-            // Let's create a full list for the dropdown
-            fetch('https://restcountries.com/v3.1/all')
-                .then(response => response.json())
-                .then(data => {
-                    const sortedCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-                    let options = '';
-                    sortedCountries.forEach(country => {
-                        if(country.idd.root && country.idd.suffixes) {
-                            const dialCode = country.idd.root + country.idd.suffixes[0];
-                            options += `<option value="${dialCode}">${country.flag} ${country.name.common} (${dialCode})</option>`;
-                        }
-                    });
-                    countryCodeSelect.innerHTML = options;
-                    countryCodeSelect.value = "+55"; // Default to Brazil
-                })
-                .catch(err => {
-                    console.error("Failed to load country codes, using a default list.", err);
-                    // Fallback to a minimal list if API fails
-                    countryCodeSelect.innerHTML = `
-                        <option value="+55">🇧🇷 Brazil (+55)</option>
-                        <option value="+1">🇺🇸 United States (+1)</option>
-                        <option value="+351">🇵🇹 Portugal (+351)</option>
-                        <option value="+44">🇬🇧 United Kingdom (+44)</option>
-                    `;
-                });
-
-
             // Capture UTM parameters
             const urlParams = new URLSearchParams(window.location.search);
             document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
@@ -557,7 +502,6 @@
 
                 const formData = new FormData(contactForm);
                 const data = Object.fromEntries(formData.entries());
-                data.phone = `${data.country_code}${data.phone}`; // Combine country code and phone
                 
                 // *** SUBSTITUA PELA URL DO SEU WEBHOOK ***
                 const webhookUrl = 'https://webhook.site/your-unique-url'; 
