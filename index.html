@@ -67,6 +67,21 @@
         .nav-link.active:hover {
             color: #A01217;
         }
+
+        /* Form input styling */
+        .form-input {
+            background-color: #1c1c1c;
+            border: 1px solid #555;
+            color: #fff;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #A01217;
+        }
+        .map-container iframe {
+            filter: grayscale(1) invert(0.9) contrast(0.9);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -77,7 +92,6 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
                 <a href="#home" class="flex-shrink-0">
-                    <!-- Substitua 'logo-solucionne.svg' pelo nome do seu arquivo de logo -->
                     <img class="h-10 w-auto" src="assets/logo.png" alt="Logo Solucionne">
                 </a>
 
@@ -94,16 +108,16 @@
                             <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i>
                         </button>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-[#2a2a2a] rounded-lg shadow-lg p-2">
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Difusores Acústicos</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Espumas Acústicas</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Forro Acústico</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Janela Acústica</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Jateamento Termo-Acústico</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Painéis Acústicos</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Parede Acústica</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Pisos Acústicos</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Portas Acústicas</a>
-                            <a href="#products" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Visores Acústicos</a>
+                            <a href="difusores-acusticos.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Difusores Acústicos</a>
+                            <a href="espumas-acusticas.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Espumas Acústicas</a>
+                            <a href="forro-acustico.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Forro Acústico</a>
+                            <a href="janela-acustica.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Janela Acústica</a>
+                            <a href="jateamento-termo-acustico.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Jateamento Termo-Acústico</a>
+                            <a href="paineis-acusticos.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Painéis Acústicos</a>
+                            <a href="parede-acustica.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Parede Acústica</a>
+                            <a href="pisos-acusticos.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Pisos Acústicos</a>
+                            <a href="portas-acusticas.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Portas Acústicas</a>
+                            <a href="visores-acusticos.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 rounded-md">Visores Acústicos</a>
                         </div>
                     </div>
                     
@@ -153,7 +167,7 @@
         <!-- =========== QUEM SOMOS =========== -->
         <section id="about" class="py-20 md:py-32">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Expertise que você pode <span class="text-primary">ouvir</span>.</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Tradição e <span class="text-primary">experiência</span>.</h2>
                 <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-300">
                     Há mais de 24 anos no mercado, a Solucionne é referência nacional em soluções acústicas de alta performance. Nossa equipe é formada por arquitetos, engenheiros e técnicos especializados comprometidos com qualidade, inovação e conformidade normativa.
                 </p>
@@ -179,11 +193,11 @@
         </section>
 
         <!-- =========== AMBIENTES ATENDIDOS =========== -->
-        <section id="environments" class="py-20 md:py-24">
+        <section id="environments" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Atendemos a Todos os Tipos de Ambiente</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Seja para tornar sua casa mais silenciosa ou atender às exigências acústicas de grandes empreendimentos, temos a solução ideal para cada espaço.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Atendemos a Todos os Tipos de Ambiente</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Seja para tornar sua casa mais silenciosa ou atender às exigências acústicas de grandes empreendimentos, temos a solução ideal para cada espaço.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                     <div class="relative rounded-xl overflow-hidden group"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop" alt="Residência moderna" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"><div class="absolute inset-0 bg-black/60 flex items-center justify-center"><h3 class="text-3xl font-bold text-white">Residências</h3></div></div>
@@ -200,17 +214,17 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Produtos de Alta Performance para Controle de Ruído</h2>
                     <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-400">Com tecnologia de ponta, desenvolvemos e aplicamos produtos certificados e eficientes que aliam estética, funcionalidade e performance.</p>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Difusores Acústicos</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Espumas Acústicas</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Forro Acústico</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Janela Acústica</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Jateamento Termo-Acústico</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Painéis Acústicos</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Parede Acústica</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Pisos Acústicos</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Portas Acústicas</h4></a>
-                    <a href="#" class="block bg-[#1c1c1c] p-6 rounded-xl text-center group transition-all duration-300 hover:bg-primary hover:text-white transform hover:-translate-y-1"><h4 class="font-bold">Visores Acústicos</h4></a>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                    <a href="difusores-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Difusor" alt="Difusores Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Difusores Acústicos</h4></div></a>
+                    <a href="espumas-acusticas.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Espuma" alt="Espumas Acústicas" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Espumas Acústicas</h4></div></a>
+                    <a href="forro-acustico.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Forro" alt="Forro Acústico" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Forro Acústico</h4></div></a>
+                    <a href="janela-acustica.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Janela" alt="Janela Acústica" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Janela Acústica</h4></div></a>
+                    <a href="jateamento-termo-acustico.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Jateamento" alt="Jateamento Termo-Acústico" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Jateamento Termo-Acústico</h4></div></a>
+                    <a href="paineis-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Painel" alt="Painéis Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Painéis Acústicos</h4></div></a>
+                    <a href="parede-acustica.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Parede" alt="Parede Acústica" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Parede Acústica</h4></div></a>
+                    <a href="pisos-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Piso" alt="Pisos Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Pisos Acústicos</h4></div></a>
+                    <a href="portas-acusticas.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Porta" alt="Portas Acústicas" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Portas Acústicas</h4></div></a>
+                    <a href="visores-acusticos.html" class="block bg-[#1c1c1c] rounded-xl overflow-hidden group transition-all duration-300 hover:bg-primary transform hover:-translate-y-2"><img src="https://placehold.co/300x200/2a2a2a/ffffff?text=Visor" alt="Visores Acústicos" class="w-full h-32 object-cover"><div class="p-4 text-center"><h4 class="font-bold text-white group-hover:text-white">Visores Acústicos</h4></div></a>
                 </div>
             </div>
         </section>
@@ -233,74 +247,119 @@
         </section>
         
         <!-- =========== DEPOIMENTOS =========== -->
-        <section id="testimonials" class="py-20 md:py-24 bg-dark-alt">
+        <section id="testimonials" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">O que nossos clientes dizem</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">A experiência dos nossos clientes reflete nosso compromisso com qualidade e resultado.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">O que nossos clientes dizem</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">A experiência dos nossos clientes reflete nosso compromisso com qualidade e resultado.</p>
                 </div>
                 <!-- Grid for testimonials -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- Testimonial Card 1 -->
-                    <div class="bg-[#1c1c1c] p-8 rounded-xl shadow-lg flex flex-col">
-                        <i data-lucide="quote" class="w-12 h-12 text-primary opacity-50"></i>
-                        <blockquote class="text-lg text-gray-300 italic mt-4 flex-grow">
-                            "O trabalho da Solucionne transformou nosso estúdio. O isolamento é impecável e o ambiente ficou esteticamente incrível. Profissionalismo do início ao fim."
-                        </blockquote>
-                        <footer class="mt-6">
-                            <p class="font-bold text-white">João Silva</p>
-                            <p class="text-sm text-gray-400">Diretor, Estúdio Criativo</p>
-                        </footer>
-                    </div>
-                    <!-- Testimonial Card 2 -->
-                    <div class="bg-[#1c1c1c] p-8 rounded-xl shadow-lg flex flex-col">
-                        <i data-lucide="quote" class="w-12 h-12 text-primary opacity-50"></i>
-                        <blockquote class="text-lg text-gray-300 italic mt-4 flex-grow">
-                            "A consultoria acústica para nosso escritório foi fundamental. A equipe da Solucionne foi extremamente atenciosa e o resultado melhorou a produtividade de todos."
-                        </blockquote>
-                        <footer class="mt-6">
-                            <p class="font-bold text-white">Maria Oliveira</p>
-                            <p class="text-sm text-gray-400">Gerente de RH, Empresa Corp</p>
-                        </footer>
-                    </div>
-                    <!-- Testimonial Card 3 -->
-                    <div class="bg-[#1c1c1c] p-8 rounded-xl shadow-lg flex flex-col">
-                        <i data-lucide="quote" class="w-12 h-12 text-primary opacity-50"></i>
-                        <blockquote class="text-lg text-gray-300 italic mt-4 flex-grow">
-                            "Reduzimos significativamente o ruído da nossa área de produção graças às barreiras acústicas instaladas pela Solucionne. Um serviço de alta qualidade."
-                        </blockquote>
-                        <footer class="mt-6">
-                            <p class="font-bold text-white">Carlos Pereira</p>
-                            <p class="text-sm text-gray-400">Chefe de Operações, Indústria XYZ</p>
-                        </footer>
-                    </div>
+                    <div class="bg-[#1c1c1c] p-8 rounded-xl shadow-lg flex flex-col"><i data-lucide="quote" class="w-12 h-12 text-primary opacity-50"></i><blockquote class="text-lg text-gray-300 italic mt-4 flex-grow">"O trabalho da Solucionne transformou nosso estúdio. O isolamento é impecável e o ambiente ficou esteticamente incrível. Profissionalismo do início ao fim."</blockquote><footer class="mt-6"><p class="font-bold text-white">João Silva</p><p class="text-sm text-gray-400">Diretor, Estúdio Criativo</p></footer></div>
+                    <div class="bg-[#1c1c1c] p-8 rounded-xl shadow-lg flex flex-col"><i data-lucide="quote" class="w-12 h-12 text-primary opacity-50"></i><blockquote class="text-lg text-gray-300 italic mt-4 flex-grow">"A consultoria acústica para nosso escritório foi fundamental. A equipe da Solucionne foi extremamente atenciosa e o resultado melhorou a produtividade de todos."</blockquote><footer class="mt-6"><p class="font-bold text-white">Maria Oliveira</p><p class="text-sm text-gray-400">Gerente de RH, Empresa Corp</p></footer></div>
+                    <div class="bg-[#1c1c1c] p-8 rounded-xl shadow-lg flex flex-col"><i data-lucide="quote" class="w-12 h-12 text-primary opacity-50"></i><blockquote class="text-lg text-gray-300 italic mt-4 flex-grow">"Reduzimos significativamente o ruído da nossa área de produção graças às barreiras acústicas instaladas pela Solucionne. Um serviço de alta qualidade."</blockquote><footer class="mt-6"><p class="font-bold text-white">Carlos Pereira</p><p class="text-sm text-gray-400">Chefe de Operações, Indústria XYZ</p></footer></div>
                 </div>
             </div>
         </section>
-
-        <!-- =========== CONTEÚDO / BLOG =========== -->
-        <section id="blog" class="py-20 md:py-24">
+        
+       <!-- =========== CONTACT SECTION =========== -->
+        <section id="contact" class="py-20 md:py-24 bg-dark-alt">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Conteúdo e Inovação</h2>
-                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">Acompanhe nossos artigos com insights sobre acústica, design e inovação.</p>
+                <!-- Section Title -->
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Vamos começar seu projeto?</h2>
+                    <p class="mt-4 text-lg text-gray-300">Fale com nossos consultores através do formulário ou entre em contato direto conosco.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div class="bg-dark-alt rounded-xl overflow-hidden group"><img src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?q=80&w=1974&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Arquitetura moderna"><div class="p-6"><h3 class="text-xl font-bold text-white mb-2">Acústica na arquitetura moderna</h3><p class="text-gray-400 mb-4">Como o design acústico está moldando os espaços do futuro.</p><a href="#" class="font-semibold text-primary group-hover:underline">Ler artigo <span aria-hidden="true">→</span></a></div></div>
-                    <div class="bg-dark-alt rounded-xl overflow-hidden group"><img src="https://images.unsplash.com/photo-1581092993383-11467456c632?q=80&w=2070&auto=format&fit=crop" class="w-full h-48 object-cover" alt="Painel de MDF"><div class="p-6"><h3 class="text-xl font-bold text-white mb-2">Solução em obra: Painel MDF</h3><p class="text-gray-400 mb-4">Um estudo de caso sobre a aplicação de painéis acústicos em um auditório.</p><a href="#" class="font-semibold text-primary group-hover:underline">Ler artigo <span aria-hidden="true">→</span></a></div></div>
-                </div>
-            </div>
-        </section>
 
-        <!-- =========== FINAL CTA =========== -->
-        <section id="contact" class="bg-primary">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Vamos começar seu projeto?</h2>
-                <p class="mt-4 max-w-xl mx-auto text-lg text-white/80">Fale com um consultor e descubra como transformar o som do seu ambiente.</p>
-                <div class="mt-8">
-                    <a href="#" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105">
-                        Entrar em contato
-                    </a>
+                <!-- Two-column grid -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    
+                    <!-- Left Column: Info & Map -->
+                    <div class="bg-[#1c1c1c] p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white mb-6">Informações de Contato</h3>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-primary mt-1 flex-shrink-0"></i>
+                                <span>São Paulo, SP - Brasil</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="phone" class="w-6 h-6 text-primary mt-1 flex-shrink-0"></i>
+                                <a href="tel:+5511999998888" class="hover:text-white">+55 (11) 99999-8888</a>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <i data-lucide="mail" class="w-6 h-6 text-primary mt-1 flex-shrink-0"></i>
+                                <a href="mailto:contato@solucionne.com.br" class="hover:text-white">contato@solucionne.com.br</a>
+                            </li>
+                        </ul>
+
+                        <a href="https://wa.me/5511999998888?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="mt-8 inline-flex items-center justify-center space-x-2 bg-[#25D366] text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition-colors w-full">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            <span>Chamar no WhatsApp</span>
+                        </a>
+
+                        <div class="mt-8 rounded-lg overflow-hidden map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197534247963!2d-46.656571884482!3d-23.5613716676034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0x2063e375f0d23741!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1678886565354!5m2!1spt-BR!2sbr" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Form -->
+                    <div class="bg-[#1c1c1c] p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-white mb-6 text-center">Ou envie sua mensagem</h3>
+                        <form id="contact-form">
+                            <div class="space-y-6">
+                                <!-- Name -->
+                                <div>
+                                    <label for="name" class="sr-only">Nome</label>
+                                    <input type="text" name="name" id="name" placeholder="Seu nome completo" required class="form-input w-full p-3 rounded-md">
+                                </div>
+                                <!-- Email -->
+                                <div>
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" required class="form-input w-full p-3 rounded-md">
+                                </div>
+                                <!-- Phone -->
+                                <div class="flex">
+                                    <label for="country_code" class="sr-only">Código do País</label>
+                                    <select name="country_code" id="country_code" class="form-input rounded-l-md border-r-0 p-3">
+                                        <option value="+55">🇧🇷 +55</option>
+                                        <option value="+1">🇺🇸 +1</option>
+                                        <option value="+351">🇵🇹 +351</option>
+                                        <option value="+44">🇬🇧 +44</option>
+                                    </select>
+                                    <label for="phone" class="sr-only">Telefone</label>
+                                    <input type="tel" name="phone" id="phone" placeholder="Seu telefone" required class="form-input w-full p-3 rounded-r-md">
+                                </div>
+                                <!-- Message -->
+                                <div>
+                                    <label for="message" class="sr-only">Mensagem</label>
+                                    <textarea name="message" id="message" rows="4" placeholder="Conte-nos sobre seu projeto..." required class="form-input w-full p-3 rounded-md"></textarea>
+                                </div>
+                            </div>
+                            
+                            <!-- Hidden Fields -->
+                            <input type="hidden" name="TAG" value=""> <!-- Preencha com sua TAG -->
+                            <input type="hidden" name="utm_source" id="utm_source" value="">
+                            <input type="hidden" name="utm_medium" id="utm_medium" value="">
+                            <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+                            <input type="hidden" name="utm_term" id="utm_term" value="">
+                            <input type="hidden" name="utm_content" id="utm_content" value="">
+
+                            <div class="mt-8 text-center">
+                                <button type="submit" id="submit-button" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary-dark transition-transform transform hover:scale-105 w-full">
+                                    Fale com nossos consultores
+                                </button>
+                            </div>
+                            <div id="form-status" class="mt-4 text-center text-white font-semibold h-6"></div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -310,11 +369,7 @@
     <footer class="bg-[#111111] text-gray-400">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-1">
-                    <!-- Substitua 'logo-solucionne.svg' pelo nome do seu arquivo de logo -->
-                    <img class="h-10 w-auto mb-4" src="./logo-solucionne.svg" alt="Logo Solucionne">
-                    <p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p>
-                </div>
+                <div class="md:col-span-1"><img class="h-10 w-auto mb-4" src="assets/logo.png" alt="Logo Solucionne"><p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p></div>
                 <div><h4 class="font-bold text-white mb-4">Links Rápidos</h4><ul class="space-y-2 text-sm"><li><a href="#about" class="hover:text-white">Sobre Nós</a></li><li><a href="#solutions" class="hover:text-white">Soluções</a></li><li><a href="#products" class="hover:text-white">Produtos</a></li><li><a href="#clients" class="hover:text-white">Clientes</a></li></ul></div>
                 <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>contato@solucionne.com.br</p></li><li><p>+55 (11) 99999-8888</p></li><li><p>São Paulo, SP - Brasil</p></li></ul></div>
                 <div><h4 class="font-bold text-white mb-4">Siga-nos</h4><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a></div></div>
@@ -345,12 +400,7 @@
             const sections = document.querySelectorAll('main section[id]');
             const navLinks = document.querySelectorAll('#desktop-nav .nav-link');
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.4 
-            };
-
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.4 };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -363,9 +413,67 @@
                     }
                 });
             }, observerOptions);
+            sections.forEach(section => observer.observe(section));
 
-            sections.forEach(section => {
-                observer.observe(section);
+            // Capture UTM parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
+            document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
+            document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
+            document.getElementById('utm_term').value = urlParams.get('utm_term') || '';
+            document.getElementById('utm_content').value = urlParams.get('utm_content') || '';
+
+            // Form Submission
+            const contactForm = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-button');
+            const formStatus = document.getElementById('form-status');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitButton.disabled = true;
+                submitButton.textContent = 'Enviando...';
+
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData.entries());
+                data.phone = `${data.country_code}${data.phone}`; // Combine country code and phone
+                
+                // *** SUBSTITUA PELA URL DO SEU WEBHOOK ***
+                const webhookUrl = 'https://webhook.site/your-unique-url'; 
+
+                fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(result => {
+                    formStatus.textContent = 'Mensagem enviada com sucesso!';
+                    formStatus.style.color = '#34D399'; // Green
+                    contactForm.reset();
+                    // Restore UTMs after reset
+                    document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
+                    document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
+                    document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
+                    document.getElementById('utm_term').value = urlParams.get('utm_term') || '';
+                    document.getElementById('utm_content').value = urlParams.get('utm_content') || '';
+                })
+                .catch(error => {
+                    formStatus.textContent = 'Ocorreu um erro. Tente novamente.';
+                    formStatus.style.color = '#F87171'; // Red
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Fale com nossos consultores';
+                });
             });
         });
     </script>
