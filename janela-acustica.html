@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janelas Acústicas - Solucionne</title>
+    <title>Janelas Acústicas de Alta Performance - Solucionne</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     
-                    <a href="index.html#contact" class="nav-link text-sm font-semibold text-gray-300">Contato</a>
+                    <a href="#contact" class="nav-link text-sm font-semibold text-gray-300">Contato</a>
                 </nav>
 
                 <!-- Mobile Menu Button -->
@@ -126,73 +126,40 @@
 
     <main>
         <!-- =========== PRODUCT HERO =========== -->
-        <section class="bg-gray-50 py-20 pt-40">
+        <section class="bg-gray-50 pt-32 pb-20">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Janelas Acústicas</h1>
-                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Minimize os efeitos dos ruídos indesejados e tenha um ambiente mais confortável.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========== PRODUCT DETAILS =========== -->
-        <section class="py-20 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <!-- Image Gallery -->
-                    <div>
-                        <img id="main-product-image" src="assets/home/janelas-acusticas.png" alt="Janela Acústica Principal" class="w-full h-auto aspect-square object-cover rounded-lg shadow-lg">
-                        <div class="grid grid-cols-4 gap-4 mt-4">
-                            <img src="assets/home/janelas-acusticas.png" alt="Thumbnail 1" class="cursor-pointer rounded-md border-2 border-primary" onclick="changeImage(this.src)">
-                            <img src="https://placehold.co/200x200/2a2a2a/ffffff?text=Detalhe+1" alt="Thumbnail 2" class="cursor-pointer rounded-md border-2 border-transparent hover:border-primary" onclick="changeImage(this.src)">
-                            <img src="https://placehold.co/200x200/2a2a2a/ffffff?text=Detalhe+2" alt="Thumbnail 3" class="cursor-pointer rounded-md border-2 border-transparent hover:border-primary" onclick="changeImage(this.src)">
-                            <img src="https://placehold.co/200x200/2a2a2a/ffffff?text=Aplicação" alt="Thumbnail 4" class="cursor-pointer rounded-md border-2 border-transparent hover:border-primary" onclick="changeImage(this.src)">
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="text-gray-700 text-center">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Conforto e Silêncio para seu Ambiente</h2>
-                        <p class="text-lg mb-6 max-w-xl mx-auto">Nossas esquadrias são fabricadas em alumínio, com vedação acústica e vidros laminados insulados com câmara de ar desidratado. O acabamento é feito por meio de banho eletrostático (anodização), garantindo qualidade e beleza duradoura.</p>
-                        
-                        <a href="#contact" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary-dark transition-transform transform hover:scale-105">
-                            Solicitar Orçamento
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900">O Fim do Barulho: Conforto e Silêncio com as <span class="text-primary">Janelas Acústicas</span> Solucionne</h1>
+                        <p class="mt-4 text-xl text-gray-600">Tecnologia de ponta para isolar ruídos externos e garantir sua tranquilidade, seja em casa ou no trabalho.</p>
+                        <ul class="mt-6 space-y-2 text-left">
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2"></i> Paz e sossego para sua família.</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2"></i> Foco e produtividade no seu trabalho.</li>
+                            <li class="flex items-center"><i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-2"></i> Valorização do seu imóvel.</li>
+                        </ul>
+                        <a href="#contact" class="mt-8 inline-block bg-primary text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-primary-dark transition-transform transform hover:scale-105">
+                            Solicitar Orçamento Agora
                         </a>
                     </div>
+                    <div>
+                        <img src="assets/home/janelas-acusticas.png" alt="Janela Acústica em um ambiente moderno" class="w-full h-auto aspect-square object-cover rounded-lg shadow-2xl">
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- =========== AVAILABLE COLORS =========== -->
+        
+        <!-- =========== PROBLEM/SOLUTION =========== -->
         <section class="py-20 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900">Cores Disponíveis</h2>
-                </div>
-                <div class="max-w-3xl mx-auto flex flex-wrap justify-center gap-8 md:gap-16">
-                    <div class="text-center">
-                        <div class="w-24 h-24 rounded-full bg-gray-300 border-4 border-primary mx-auto"></div>
-                        <span class="mt-4 block font-semibold text-sm text-gray-800">ALUMÍNIO<br>NATURAL FOSCO</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-24 h-24 rounded-full bg-white border-4 border-primary mx-auto"></div>
-                        <span class="mt-4 block font-semibold text-sm text-gray-800">BRANCO</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-24 h-24 rounded-full bg-black border-4 border-primary mx-auto"></div>
-                        <span class="mt-4 block font-semibold text-sm text-gray-800">PRETO</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-24 h-24 rounded-full bg-yellow-800 border-4 border-primary mx-auto"></div>
-                        <span class="mt-4 block font-semibold text-sm text-gray-800">BRONZE</span>
-                    </div>
-                </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                 <h2 class="text-3xl font-bold text-gray-900">O barulho da cidade está invadindo seu espaço?</h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Nossas esquadrias são a solução definitiva. Fabricadas em alumínio com vedação superior e vidros laminados insulados, elas garantem a vedação ideal para edifícios residenciais, comerciais ou industriais.</p>
             </div>
         </section>
 
         <!-- =========== PRODUCT LINES =========== -->
         <section class="py-20 md:py-24 bg-gray-100">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">Nossas Linhas de Esquadrias</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">Três Linhas Completas para sua Necessidade</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Linha Basic -->
                     <div class="bg-white p-8 rounded-lg shadow-lg text-center">
@@ -204,8 +171,9 @@
                         <p class="text-xl font-bold mt-4">A partir de R$ 2.100,00/m²</p>
                     </div>
                     <!-- Linha Confort -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-                        <h3 class="text-2xl font-bold text-primary mb-2">Linha Confort</h3>
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center border-4 border-primary transform scale-105">
+                        <span class="bg-primary text-white font-bold px-3 py-1 rounded-full text-sm absolute -top-4">MAIS POPULAR</span>
+                        <h3 class="text-2xl font-bold text-primary mb-2 mt-4">Linha Confort</h3>
                         <p class="text-gray-600 mb-4">A escolha ideal para quem busca uma solução acessível e eficaz.</p>
                         <img src="https://placehold.co/300x200/e2e8f0/334155?text=Vidro+Laminado+10mm" alt="Linha Confort" class="w-full h-40 object-cover rounded-md mb-4">
                         <p class="font-semibold">Composição: Vidro laminado de 10mm</p>
@@ -224,22 +192,50 @@
                 </div>
             </div>
         </section>
-        
-        <!-- =========== OPENING TYPES =========== -->
+
+        <!-- =========== OPENING TYPES & INSTALLATION =========== -->
         <section class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">Tipos de Abertura</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Design e Instalação Flexíveis</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Oferecemos diferentes tipos de abertura e instalação para se adaptar perfeitamente ao seu projeto.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="text-center">
-                        <img src="https://placehold.co/400x300/e2e8f0/334155?text=Abertura+de+Correr" alt="Janela com Abertura de Correr" class="w-full rounded-lg shadow-md">
-                        <h3 class="text-2xl font-bold mt-4">Abertura de Correr</h3>
+                        <img src="https://placehold.co/500x350/e2e8f0/334155?text=Abertura+de+Correr" alt="Janela com Abertura de Correr" class="w-full rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold">Abertura de Correr</h3>
                     </div>
                     <div class="text-center">
-                        <img src="https://placehold.co/400x300/e2e8f0/334155?text=Abertura+de+Giro" alt="Janela com Abertura de Giro" class="w-full rounded-lg shadow-md">
-                        <h3 class="text-2xl font-bold mt-4">Abertura de Giro</h3>
+                        <img src="https://placehold.co/500x350/e2e8f0/334155?text=Abertura+de+Giro" alt="Janela com Abertura de Giro" class="w-full rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold">Abertura de Giro</h3>
+                        <p class="text-gray-600 mt-2">Possui maior eficiência acústica devido à vedação superior.</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://placehold.co/500x350/e2e8f0/334155?text=Instalação+Sobreposta" alt="Instalação Sobreposta" class="w-full rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold">Instalação Sobreposta</h3>
+                        <p class="text-gray-600 mt-2">A esquadria é instalada sobre a janela existente, sem quebradeira.</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="https://placehold.co/500x350/e2e8f0/334155?text=Instalação+Embutida" alt="Instalação Embutida" class="w-full rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold">Instalação Embutida</h3>
+                        <p class="text-gray-600 mt-2">A janela atual é substituída pela nova esquadria acústica.</p>
                     </div>
                 </div>
-                <p class="text-center mt-8 text-gray-600 max-w-3xl mx-auto">Lembre-se que as esquadrias com abertura de giro possuem uma maior eficiência acústica comparadas com a abertura de correr, devido à uma maior vedação.</p>
+            </div>
+        </section>
+
+        <!-- =========== HOW TO MEASURE =========== -->
+        <section class="py-20 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">Como Medir sua Janela</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Siga estes 3 passos simples para um orçamento preciso.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="text-center"><i data-lucide="move-horizontal" class="w-12 h-12 text-primary mx-auto mb-4"></i><h3 class="text-xl font-bold">1. Meça a Largura</h3><p class="mt-2 text-gray-600">Meça a largura interna do batente em 3 pontos (topo, meio, base) e anote o menor valor.</p></div>
+                    <div class="text-center"><i data-lucide="move-vertical" class="w-12 h-12 text-primary mx-auto mb-4"></i><h3 class="text-xl font-bold">2. Meça a Altura</h3><p class="mt-2 text-gray-600">Meça a altura interna do batente em 3 pontos (esquerda, centro, direita) e anote o menor valor.</p></div>
+                    <div class="text-center"><i data-lucide="move-3d" class="w-12 h-12 text-primary mx-auto mb-4"></i><h3 class="text-xl font-bold">3. Meça a Profundidade</h3><p class="mt-2 text-gray-600">Para instalação embutida, meça a profundidade do vão. Precisamos de no mínimo 7cm.</p></div>
+                </div>
             </div>
         </section>
 
