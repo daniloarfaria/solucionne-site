@@ -11,7 +11,7 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -221,11 +221,11 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossas Associações</h2>
                     <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Fazemos parte de importantes órgãos que regulamentam e promovem a qualidade no setor acústico.</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                    <img src="assets/associations/rmmg.png" alt="Rede Metrológica de Minas Gerais" class="h-64 mx-auto">
-                    <img src="assets/associations/abnt.png" alt="ABNT - Associação Brasileira de Normas Técnicas" class="h-64 mx-auto">
-                    <img src="assets/associations/pro-acustica.png" alt="Pro Acústica" class="h-64 mx-auto">
-                    <img src="assets/associations/sobrac.png" alt="SOBRAC - Sociedade Brasileira de Acústica" class="h-64 mx-auto">
+                <div class="flex flex-wrap justify-center items-center gap-x-16 gap-y-10">
+                    <img src="assets/associations/rmmg.png" alt="Rede Metrológica de Minas Gerais" class="h-24">
+                    <img src="assets/associations/abnt.png" alt="ABNT - Associação Brasileira de Normas Técnicas" class="h-24">
+                    <img src="assets/associations/pro-acustica.png" alt="Pro Acústica" class="h-24">
+                    <img src="assets/associations/sobrac.png" alt="SOBRAC - Sociedade Brasileira de Acústica" class="h-24">
                 </div>
             </div>
         </section>
@@ -362,19 +362,67 @@
         </section>
 
         <!-- =========== AWARDS SECTION =========== -->
-        <section id="awards" class="py-20 md:py-24 bg-primary">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <img src="assets/home/premio.jpg" alt="Premiação Top of Quality Gold Internacional" class="rounded-lg shadow-2xl w-full">
-                    </div>
-                    <div class="text-white">
-                        <h2 class="text-3xl md:text-4xl font-bold">Empresa Reconhecida e Premiada no Comércio Nacional</h2>
-                        <p class="mt-6 text-lg text-white/80">A Solucionne tem a honra de ser reconhecida com o prêmio TOP OF QUALITY GOLD INTERNACIONAL, um selo que atesta nosso compromisso com a excelência, inovação e a satisfação total de nossos clientes em todo o território nacional.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <!-- =========== AWARDS SECTION (refinada) =========== -->
+<section id="awards" class="py-20 md:py-28 bg-gradient-to-br from-[#A01217] to-[#800f13]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      
+      <!-- Imagem em destaque -->
+      <figure class="lg:col-span-5">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black/10">
+          <img 
+            src="assets/home/award-photo.jpg" 
+            alt="Equipe Solucionne recebendo o prêmio Top of Quality Gold Internacional" 
+            class="w-full h-full object-cover aspect-[4/3] md:aspect-[16/10]"
+            loading="lazy" decoding="async" width="1280" height="800"
+          >
+          <!-- detalhe sutil no canto -->
+          <span class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/5"></span>
+        </div>
+        <figcaption class="mt-3 text-white/80 text-sm text-center">
+          Reconhecimento “Top of Quality Gold Internacional”
+        </figcaption>
+      </figure>
+
+      <!-- Conteúdo -->
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white/90 ring-1 ring-white/15">
+          Premiação
+        </span>
+        <h2 class="mt-4 text-3xl md:text-4xl font-extrabold leading-tight text-white">
+          Empresa reconhecida e premiada no comércio nacional
+        </h2>
+        <p class="mt-5 text-lg md:text-xl text-white/90 leading-relaxed">
+          A Solucionne tem a honra de ser reconhecida com o prêmio <span class="font-semibold">Top of Quality Gold Internacional</span>, 
+          um selo que atesta nosso compromisso com a excelência, inovação e a satisfação total de nossos clientes em todo o território nacional.
+        </p>
+
+        <!-- selo/valores opcionais -->
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="rounded-xl bg-white/10 backdrop-blur-sm p-4 ring-1 ring-white/15">
+            <p class="text-sm text-white/80">Excelência</p>
+            <p class="mt-1 font-semibold text-white">Qualidade comprovada</p>
+          </div>
+          <div class="rounded-xl bg-white/10 backdrop-blur-sm p-4 ring-1 ring-white/15">
+            <p class="text-sm text-white/80">Inovação</p>
+            <p class="mt-1 font-semibold text-white">Soluções modernas</p>
+          </div>
+          <div class="rounded-xl bg-white/10 backdrop-blur-sm p-4 ring-1 ring-white/15">
+            <p class="text-sm text-white/80">Confiança</p>
+            <p class="mt-1 font-semibold text-white">Reconhecimento nacional</p>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold bg-white text-[#A01217] hover:bg-gray-100 transition">
+            Fale com um consultor
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
         
        <!-- =========== CONTACT SECTION =========== -->
         <section id="contact" class="py-20 md:py-24 bg-dark-alt">
@@ -515,14 +563,19 @@
             menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
             
             const mobileLinks = mobileMenu.querySelectorAll('a');
-            mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+            mobileLinks.forEach(link => link.addEventListener('click', () => {
+                if (!link.closest('#mobile-products-submenu')) {
+                   mobileMenu.classList.add('hidden')
+                }
+            }));
 
             // Mobile Products Submenu Toggle
             const mobileProductsButton = document.getElementById('mobile-products-button');
             const mobileProductsSubmenu = document.getElementById('mobile-products-submenu');
             const mobileProductsIcon = document.getElementById('mobile-products-icon');
 
-            mobileProductsButton.addEventListener('click', () => {
+            mobileProductsButton.addEventListener('click', (e) => {
+                e.stopPropagation();
                 mobileProductsSubmenu.classList.toggle('hidden');
                 mobileProductsIcon.classList.toggle('rotate-180');
             });
@@ -572,79 +625,32 @@
 
                 fetch(webhookUrl, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify(data)
                 })
                 .then(response => {
-                    if (response.ok) {
-                        return response.json();
-                    }
+                    if (response.ok) return response.json();
                     throw new Error('Network response was not ok.');
                 })
                 .then(result => {
                     formStatus.textContent = 'Mensagem enviada com sucesso!';
-                    formStatus.style.color = '#34D399'; // Green
+                    formStatus.style.color = '#34D399';
                     contactForm.reset();
-                    // Restore UTMs after reset
-                    document.getElementById('utm_source').value = urlParams.get('utm_source') || '';
-                    document.getElementById('utm_medium').value = urlParams.get('utm_medium') || '';
-                    document.getElementById('utm_campaign').value = urlParams.get('utm_campaign') || '';
-                    document.getElementById('utm_term').value = urlParams.get('utm_term') || '';
-                    document.getElementById('utm_content').value = urlParams.get('utm_content') || '';
+                    urlParams.forEach((value, key) => {
+                        if(key.startsWith('utm_')) {
+                           document.getElementById(key).value = value;
+                        }
+                    });
                 })
                 .catch(error => {
                     formStatus.textContent = 'Ocorreu um erro. Tente novamente.';
-                    formStatus.style.color = '#F87171'; // Red
+                    formStatus.style.color = '#F87171';
                     console.error('Error:', error);
                 })
                 .finally(() => {
                     submitButton.disabled = false;
                     submitButton.textContent = 'Fale com nossos consultores';
                 });
-            });
-
-            // Environment Modal Logic
-            const envModal = document.getElementById('environment-modal');
-            const modalContent = document.getElementById('modal-content');
-            const modalCloseButton = document.getElementById('modal-close-button');
-            const modalImage = document.getElementById('modal-image');
-            const modalTitle = document.getElementById('modal-title');
-            const modalText = document.getElementById('modal-text');
-            const envCards = document.querySelectorAll('.env-card');
-
-            const openModal = (card) => {
-                const imgSrc = card.dataset.imgSrc;
-                const title = card.dataset.title;
-                const text = card.dataset.text;
-
-                modalImage.src = imgSrc;
-                modalImage.alt = title;
-                modalTitle.textContent = title;
-                modalText.textContent = text;
-
-                document.body.style.overflow = 'hidden';
-                envModal.classList.remove('opacity-0', 'pointer-events-none');
-                envModal.classList.add('active');
-            };
-
-            const closeModal = () => {
-                document.body.style.overflow = '';
-                envModal.classList.add('opacity-0', 'pointer-events-none');
-                envModal.classList.remove('active');
-            };
-
-            envCards.forEach(card => {
-                card.addEventListener('click', () => openModal(card));
-            });
-
-            modalCloseButton.addEventListener('click', closeModal);
-            envModal.addEventListener('click', (e) => {
-                if (e.target === envModal) {
-                    closeModal();
-                }
             });
             
             // Hero Slideshow Logic
