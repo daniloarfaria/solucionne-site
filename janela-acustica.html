@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janelas Acústicas de Alta Performance - Solucionne</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJ88RS5C');</script>
+    <!-- End Google Tag Manager -->
+    
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -44,6 +53,12 @@
     </style>
 </head>
 <body class="antialiased">
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ88RS5C"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- =========== HEADER =========== -->
     <header id="header" class="sticky top-0 left-0 w-full z-50 transition-all duration-300 bg-[#1C1C1C]/80 backdrop-blur-sm border-b border-gray-700/50">
@@ -286,7 +301,7 @@
                                 <div><label for="message" class="sr-only">Mensagem</label><textarea name="message" id="message" rows="4" placeholder="Conte-nos sobre seu projeto..." required class="form-input w-full p-3 rounded-md"></textarea></div>
                             </div>
                             
-                            <input type="hidden" name="TAG" value="">
+                            <input type="hidden" name="TAG" value="JANELA-ACUSTICA">
                             <input type="hidden" name="utm_source" id="utm_source" value=""><input type="hidden" name="utm_medium" id="utm_medium" value=""><input type="hidden" name="utm_campaign" id="utm_campaign" value=""><input type="hidden" name="utm_term" id="utm_term" value=""><input type="hidden" name="utm_content" id="utm_content" value="">
                             <div class="mt-8 text-center"><button type="submit" id="submit-button" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-primary-dark transition-transform transform hover:scale-105 w-full">Fale com nossos consultores</button></div>
                             <div id="form-status" class="mt-4 text-center text-white font-semibold h-6"></div>
@@ -388,7 +403,7 @@
                 const data = Object.fromEntries(formData.entries());
                 
                 // *** SUBSTITUA PELA URL DO SEU WEBHOOK ***
-                const webhookUrl = 'https://webhook.site/your-unique-url'; 
+                const webhookUrl = 'https://webhook-test.com/feadd74c2fcfe6426e29071165a9de12'; 
 
                 fetch(webhookUrl, {
                     method: 'POST',
