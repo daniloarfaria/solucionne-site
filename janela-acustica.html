@@ -24,35 +24,14 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FFFFFF;
-            color: #1f2937;
-        }
-        .bg-primary { background-color: #A01217; }
-        .text-primary { color: #A01217; }
-        .border-primary { border-color: #A01217; }
-        .hover\:bg-primary-dark:hover { background-color: #800f13; }
-        .bg-dark-alt { background-color: #2a2a2a; }
-        
-        .group .dropdown-menu { display: none; }
-        .group:hover .dropdown-menu { display: block; }
-
-        .nav-link { position: relative; transition: color 0.3s ease; padding-bottom: 8px; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 50%; transform: translateX(-50%); background-color: #A01217; transition: width 0.3s ease; }
-        .nav-link:hover, .nav-link.active { color: #FFFFFF; }
-        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-        .nav-link.active { color: #A01217; font-weight: 700; }
-        .nav-link.active:hover { color: #A01217; }
-
-        .form-input { background-color: #1c1c1c; border: 1px solid #555; color: #fff; transition: border-color 0.3s; }
-        .form-input:focus { outline: none; border-color: #A01217; }
-    </style>
+    
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- HTML Includes + Header wiring -->
+    <script defer src="assets/js/includes.js"></script>
 </head>
-<body class="antialiased">
+<body class="antialiased light-theme">
 
 
     <!-- Google Tag Manager (noscript) -->
@@ -190,18 +169,6 @@
 
     <!-- =========== FOOTER (include) =========== -->
     <div data-include="partials/footer.html"></div>
-    <!-- Footer original (comentado) -->
-    <!-- <footer class="bg-[#111111] text-gray-400"> -->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-1"><img class="h-10 w-auto mb-4" src="assets/logo.png" alt="Logo Solucionne"><p class="text-sm">Soluções acústicas de alta performance para ambientes residenciais, comerciais e industriais.</p></div>
-                <div><h4 class="font-bold text-white mb-4">Links Rápidos</h4><ul class="space-y-2 text-sm"><li><a href="index.html#about" class="hover:text-white">Sobre Nós</a></li><li><a href="index.html#solutions" class="hover:text-white">Soluções</a></li><li><a href="index.html#products" class="hover:text-white">Produtos</a></li><li><a href="index.html#clients" class="hover:text-white">Clientes</a></li></ul></div>
-                <div><h4 class="font-bold text-white mb-4">Contato</h4><ul class="space-y-2 text-sm"><li><p>vendas@solucionne.com.br</p></li><li><p>(31) 3442-1713</p></li><li><p>R. Piraí, 269 - Concórdia, Belo Horizonte - MG, 31110-750</p></li></ul></div>
-                <div><h4 class="font-bold text-white mb-4">Siga-nos</h4><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-6 h-6"></i></a><a href="#" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a></div></div>
-            </div>
-            <div class="mt-12 border-t border-gray-800 pt-8 text-center text-sm"><p>&copy; 2024 Solucionne – Termo Acústico do Brasil. Todos os direitos reservados.</p></div>
-        </div>
-    </footer>
 
     <!-- Floating WhatsApp Button -->
     <!-- <a id="whatsapp-button" href="https://wa.me/553134421713?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20as%20soluções%20acústicas." target="_blank" class="fixed bottom-5 right-5 z-50 bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform"> -->
