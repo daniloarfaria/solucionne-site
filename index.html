@@ -631,34 +631,58 @@
                 submitButton.textContent = 'Enviando...';
 
                 const formData = new FormData(contactForm);
-                const data = new URLSearchParams(formData);
+
+                // Envia como application/x-www-form-urlencoded com string explícita
+                const encoded = new URLSearchParams();
+                for (const [key, value] of formData.entries()) {
+                    encoded.append(key, String(value));
+                }
 
                 // *** SUBSTITUA PELA URL DO SEU WEBHOOK ***
                 const webhookUrl = 'https://webhook-test.com/86a335b20dcd35cf035a4044db6da02c';
 
+                // Log básico para diagnóstico (apenas no console)
+                try { console.debug('[Contato] Payload enviado:', Object.fromEntries(formData.entries())); } catch(_) {}
+
                 fetch(webhookUrl, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: data
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+                        'Accept': 'application/json, text/plain, */*'
+                    },
+                    body: encoded.toString(),
+                    redirect: 'follow'
                 })
-                .then(response => {
-                    if (response.ok) return response.json();
-                    throw new Error('Network response was not ok.');
+                .then(async response => {
+                    const contentType = response.headers.get('content-type') || '';
+                    let body;
+                    try {
+                        body = contentType.includes('application/json') ? await response.json() : await response.text();
+                    } catch (err) {
+                        body = null; // pode ser 204 sem conteúdo
+                    }
+                    if (!response.ok) {
+                        const msg = typeof body === 'string' && body ? body : (body ? JSON.stringify(body) : 'Sem corpo de resposta');
+                        throw new Error(`HTTP ${response.status} - ${msg}`);
+                    }
+                    return body;
                 })
-                .then(result => {
+                .then(() => {
                     formStatus.textContent = 'Mensagem enviada com sucesso!';
                     formStatus.style.color = '#34D399';
                     contactForm.reset();
+                    // Restaura UTMs após o reset
                     urlParams.forEach((value, key) => {
-                        if(key.startsWith('utm_')) {
-                           document.getElementById(key).value = value;
+                        if (key.startsWith('utm_')) {
+                            const el = document.getElementById(key);
+                            if (el) el.value = value;
                         }
                     });
                 })
                 .catch(error => {
-                    formStatus.textContent = 'Ocorreu um erro. Tente novamente.';
+                    formStatus.textContent = 'Ocorreu um erro no envio.';
                     formStatus.style.color = '#F87171';
-                    console.error('Error:', error);
+                    console.error('[Contato] Falha no envio:', error);
                 })
                 .finally(() => {
                     submitButton.disabled = false;
