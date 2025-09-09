@@ -631,15 +631,15 @@
                 submitButton.textContent = 'Enviando...';
 
                 const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData.entries());
-                
+                const data = new URLSearchParams(formData);
+
                 // *** SUBSTITUA PELA URL DO SEU WEBHOOK ***
-                const webhookUrl = 'https://webhook-test.com/feadd74c2fcfe6426e29071165a9de12'; 
+                const webhookUrl = 'https://webhook-test.com/feadd74c2fcfe6426e29071165a9de12';
 
                 fetch(webhookUrl, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify(data)
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: data
                 })
                 .then(response => {
                     if (response.ok) return response.json();
